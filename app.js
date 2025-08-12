@@ -5,16 +5,17 @@ let contadorSorteios = 0; //Contabiliza o número de vezes que o botão Sortear 
 function adicionarAmigo() {
      
     let adicionado = document.querySelector('input').value.trim(); //Seleciona a tag input e garante que seu valor inicial está vazio
-    
-    if (adicionado === ""){ //Exibe erro em caso de valor vazio
+    let nomePadronizado = adicionado.toLowerCase(); //Converte os nomes digitados pelo usuário para minúsculo
 
-        return mensagemResposta('listaAmigos', 'Digite um nome!');
+    if (adicionado === ""){ 
 
-    }else if(amigosSelecionados.includes(adicionado)) { //Exibe erro caso o nome já tenha sido adicionado a lista, esvaziando o input novamente
+        return mensagemResposta('listaAmigos', 'Digite um nome!'); //Exibe erro em caso de valor vazio
+
+    }else if(amigosSelecionados.map(n => n.toLowerCase()).includes(nomePadronizado)) { //Compara os nomes já adicionados a lista, convertendo-os em minúsculo, para evitar a adição de entradas duplicadas, esvaziando o input novamente  
 
         document.querySelector('input').value = '';
 
-        return mensagemResposta('listaAmigos', 'Amigo já adicionado!');
+        return mensagemResposta('listaAmigos', 'Amigo já adicionado!'); //Exibe erro caso o nome já tenha sido adicionado a lista
 
     }else{
         adicionado = document.querySelector('input').value; //Adiciona novos nomes a lista
@@ -23,7 +24,7 @@ function adicionarAmigo() {
 
         document.querySelector('input').value = '';
 
-        return mensagemResposta('listaAmigos', amigosSelecionados.join(' - '));//inclui separador na lista de amigos
+        return mensagemResposta('listaAmigos', amigosSelecionados.join(' - ')); //inclui separador na lista de amigos
     }
 };
 
