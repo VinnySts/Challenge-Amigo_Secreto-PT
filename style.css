@@ -1,9 +1,9 @@
 :root {
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
+    --color-tertiary: #fe652b;
     --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-button-hover: #fcbd21;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -117,12 +117,12 @@ button {
 
 .button-add {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
+    color: var(--color-white);
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button-hover);
 }
 
 /* Listas */
@@ -136,7 +136,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #4B69FD;
     font-size: 22px;
     font-weight: bold;
     text-align: center;

@@ -1,44 +1,54 @@
-let amigosSelecionados = []; //Define uma lista de nomes sorteados
+let amigosSelecionados = []; //Define lista de nomes sorteados
+let amigosSorteados = []; //Armazena os nomes já sorteados
 let contadorSorteios = 0; //Contabiliza o número de vezes que o botão Sortear amigo foi acionado
 
-//Função que permite ao botão Adicionar, incluir nomes a lista de sorteados 
+//Inclui nomes a lista de sorteados 
 function adicionarAmigo() {
      
-    let adicionado = document.querySelector('input').value.trim(); //Seleciona a tag input e garante que seu valor inicial está vazio
-    let nomePadronizado = adicionado.toLowerCase(); //Converte os nomes digitados pelo usuário para minúsculo
+    let adicionado = document.querySelector('input').value.trim();
+    let nomePadronizado = adicionado.toLowerCase(); 
 
     if (adicionado === ""){ 
 
-        return mensagemResposta('listaAmigos', 'Digite um nome!'); //Exibe erro em caso de valor vazio
+        return mensagemResposta('listaAmigos', 'Digite um nome!'); 
 
-    }else if(amigosSelecionados.map(n => n.toLowerCase()).includes(nomePadronizado)) { //Compara os nomes já adicionados a lista, convertendo-os em minúsculo, para evitar a adição de entradas duplicadas, esvaziando o input novamente  
+    }else if(amigosSelecionados.map(n => n.toLowerCase()).includes(nomePadronizado)) { 
 
         document.querySelector('input').value = '';
 
-        return mensagemResposta('listaAmigos', 'Amigo já adicionado!'); //Exibe erro caso o nome já tenha sido adicionado a lista
+        return mensagemResposta('listaAmigos', 'Amigo já adicionado!'); 
 
     }else{
-        adicionado = document.querySelector('input').value; //Adiciona novos nomes a lista
+        adicionado = document.querySelector('input').value;
 
         amigosSelecionados.push(adicionado);
 
         document.querySelector('input').value = '';
 
-        return mensagemResposta('listaAmigos', amigosSelecionados.join(' - ')); //inclui separador na lista de amigos
+        return mensagemResposta('listaAmigos', amigosSelecionados.join(' - '));
     }
 };
 
 //Adiciona a função de sorteio ao botão Sortear amigo
 function sortearAmigo() {
 
-    let indiceAmigos = Math.floor(Math.random() * amigosSelecionados.length);
-    let sorteado = amigosSelecionados[indiceAmigos];
-
-    if (amigosSelecionados.length === 0) { //Corrige bug que exibia a mensagem caso Sortear amigo fosse clicado sem nomes na lista
+    if (amigosSelecionados.length === 0) { 
         return mensagemResposta('listaAmigos', 'Digite um nome!');
     }
 
-    contadorSorteios++; //Atribui mais um a contagem, toda vezes que o botão Sortear amigo foi acionado
+    if (amigosSorteados.length === amigosSelecionados.length){
+        return mensagemResposta('resultado', 'Todos já foram sorteados!');
+    };
+
+    let sorteado;
+    
+    do{
+        let indiceAmigos = Math.floor(Math.random() * amigosSelecionados.length);
+        sorteado = amigosSelecionados[indiceAmigos];
+    }while (amigosSorteados.includes(sorteado)); 
+
+    amigosSorteados.push(sorteado);
+    contadorSorteios++; 
   
     return mensagemResposta('resultado', `O amigo secreto sorteado é: ${sorteado} (${contadorSorteios}º sorteio).`);
 };
