@@ -1,4 +1,6 @@
-<img src='assets/banner2.png' height='150px'>
+<img src='assets/banner.png' height='150px'>
+
+&nbsp;
 
 # **AMIGO SECRETO**
 Adicione nomes de amigos e descobra quem é o seu amigo secreto.
@@ -18,13 +20,13 @@ Atuamente encontra-se em sua versão beta, com constantes atualizações e melho
   
 Ao acessar a aplicação, o usuário deve digitar o nome de cada participante do sorteio e clicar em Adicionar. Os nomes adicionados apareceram listados na tela, abaixo do campo de digitação.
 
-<img src='assets/banner.png' height='115px'>
+<img src='assets/adicao-de-amigos.gif' height='350px'>
 
 * **SORTEIO ÚNICO OU MÚLTIPLO**
 
 Após a adição de todos os participantes, o responsável pelo sorteio deve clicar em Sortear Amigo, onde os nomes serão sorteados aleatóriamente. O nome do participante sorteado aparecerá na tela, junto ao numéro de sorteios realizados.
 
-<img src='assets/banner.png' height='115px'>
+<img src='assets/sorteio-de-amigos.gif' height='350px'>
 
 ### 📂 **ACESSO AO PROJETO**
 [![GitHub](https://img.shields.io/badge/GitHub-fff?style=for-the-badge&logo=github&logoColor=5c5aa4)](https://github.com/VinnySts)
