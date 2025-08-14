@@ -29,8 +29,8 @@ Após a adição de todos os participantes, o responsável pelo sorteio deve cli
 <img src='assets/sorteio-de-amigos.gif' height='350px'>
 
 ### 📂 **ACESSO AO PROJETO**
-[![GitHub](https://img.shields.io/badge/GitHub-fff?style=for-the-badge&logo=github&logoColor=5c5aa4)](https://github.com/VinnySts)
-![Vercel](https://img.shields.io/badge/vercel-fff.svg?style=for-the-badge&logo=vercel&logoColor=5c5aa4)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-fff?style=for-the-badge&logo=github&logoColor=5c5aa4)](https://vinnysts.github.io/Challenge-Amigo_Secreto-PT/)
+[![Vercel](https://img.shields.io/badge/vercel-fff.svg?style=for-the-badge&logo=vercel&logoColor=5c5aa4)](https://challenge-amigo-secreto-pt-brown.vercel.app/)
 
 ### 💻 **TECNOLOGIAS**
 ![HTML5](https://img.shields.io/badge/HTML5-fff?style=for-the-badge&logo=html5&logoColor=5c5aa4)
